@@ -12,11 +12,10 @@ app.use(express.json());
 
 // PostgreSQL Connection Pool
 const pool = new Pool({
-  user: process.env.DB_USER || 'postgres',
-  host: process.env.DB_HOST || 'localhost',
-  database: process.env.DB_NAME || 'construction_db',
-  password: process.env.DB_PASSWORD || 'your_password',
-  port: process.env.DB_PORT || 5432,
+  connectionString: process.env.DATABASE_URL, // Use the single URL Render gives you
+  ssl: {
+    rejectUnauthorized: false, // Required for Render/Heroku/AWS connections
+  },
 });
 
 // API Endpoint to fetch intern details by ID
@@ -24,8 +23,11 @@ app.get('/api/interns/:id', async (req, res) => {
   const { id } = req.params;
 
   try {
-    // Fetch intern details
-    const internResult = await pool.query('SELECT * FROM interns WHERE id = $1', [id]);
+    // 1. Fetch intern with column aliasing to match your React component
+    const internResult = await pool.query(
+      'SELECT id, intern_name AS "internName", role, start_date AS "startDate", end_date AS "endDate", supervisor FROM interns WHERE id = $1', 
+      [id]
+    );
     
     if (internResult.rows.length === 0) {
       return res.status(404).json({ error: 'Intern record not found' });
@@ -33,13 +35,14 @@ app.get('/api/interns/:id', async (req, res) => {
 
     const intern = internResult.rows[0];
 
-    // Fetch associated tasks
-    const tasksResult = await pool.query('SELECT * FROM tasks WHERE intern_id = $1', [id]);
+    // 2. Fetch only the task strings
+    const tasksResult = await pool.query('SELECT task_description FROM tasks WHERE intern_id = $1', [id]);
     
-    // Combine the data
+    // 3. Map the array so it's just strings: ["Task 1", "Task 2"] 
+    // This matches your .map() function in the frontend
     const responseData = {
       ...intern,
-      tasks: tasksResult.rows
+      tasksCompleted: tasksResult.rows.map(t => t.task_description)
     };
 
     res.json(responseData);

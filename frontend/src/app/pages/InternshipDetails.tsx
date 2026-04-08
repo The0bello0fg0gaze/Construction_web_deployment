@@ -1,10 +1,37 @@
-import { useParams, Link } from "react-router";
 import { MOCK_INTERNSHIPS } from "../data/mockData";
-import { ShieldCheck, XCircle, ArrowLeft, Calendar, User, Briefcase, FileCheck, Award } from "lucide-react";
+import { useParams, Link } from "react-router";
+import { useState, useEffect } from "react"; // Add these
+import { ShieldCheck, XCircle, ArrowLeft, Calendar, User, Briefcase, FileCheck, Award, Loader2 } from "lucide-react";
 
 export default function InternshipDetails() {
   const { id } = useParams<{ id: string }>();
-  const internship = MOCK_INTERNSHIPS.find((i) => i.id === id);
+  const [internship, setInternship] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Replace with your Render URL or environment variable
+    const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+    
+    fetch(`${API_URL}/api/internships/${id}`)
+      .then((res) => res.json())
+      .then((data) => {
+        setInternship(data);
+        setLoading(false);
+      })
+      .catch((err) => {
+        console.error("Error fetching internship:", err);
+        setLoading(false);
+      });
+  }, [id]);
+
+  if (loading) {
+    return (
+      <div className="flex flex-col items-center justify-center min-h-[calc(100vh-80px)]">
+        <Loader2 className="w-12 h-12 text-amber-500 animate-spin" />
+        <p className="mt-4 text-neutral-600 font-medium">Verifying Certificate...</p>
+      </div>
+    );
+  }
 
   if (!internship) {
     return (
