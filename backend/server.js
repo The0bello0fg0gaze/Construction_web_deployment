@@ -36,7 +36,7 @@ app.get('/api/interns/:id', async (req, res) => {
     const intern = internResult.rows[0];
 
     // 2. Fetch only the task strings
-    const tasksResult = await pool.query('SELECT description FROM tasks WHERE id = $1', [id]);
+    const tasksResult = await pool.query('SELECT description FROM tasks WHERE intern_id = $1', [id]);
     
     // 3. Map the array so it's just strings: ["Task 1", "Task 2"] 
     // This matches your .map() function in the frontend
