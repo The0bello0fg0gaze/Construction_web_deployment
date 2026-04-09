@@ -25,7 +25,7 @@ app.get('/api/interns/:id', async (req, res) => {
   try {
     // 1. Fetch intern with column aliasing to match your React component
     const internResult = await pool.query(
-      'SELECT id, name AS "internName", role, start_date AS "startDate", end_date AS "endDate", supervisor FROM interns WHERE id = $1', 
+      'SELECT id, name AS "internName", role, start_date AS "startDate", end_date AS "endDate" FROM interns WHERE id = $1', 
       [id]
     );
     
