@@ -25,7 +25,7 @@ app.get('/api/interns/:id', async (req, res) => {
   try {
     // 1. Fetch intern with column aliasing to match your React component
     const internResult = await pool.query(
-      'SELECT id, intern_name AS "internName", role, start_date AS "startDate", end_date AS "endDate", supervisor FROM interns WHERE id = $1', 
+      'SELECT id, name AS "internName", role, start_date AS "startDate", end_date AS "endDate", supervisor FROM interns WHERE id = $1', 
       [id]
     );
     
@@ -36,7 +36,7 @@ app.get('/api/interns/:id', async (req, res) => {
     const intern = internResult.rows[0];
 
     // 2. Fetch only the task strings
-    const tasksResult = await pool.query('SELECT task_description FROM tasks WHERE intern_id = $1', [id]);
+    const tasksResult = await pool.query('SELECT description FROM tasks WHERE id = $1', [id]);
     
     // 3. Map the array so it's just strings: ["Task 1", "Task 2"] 
     // This matches your .map() function in the frontend
