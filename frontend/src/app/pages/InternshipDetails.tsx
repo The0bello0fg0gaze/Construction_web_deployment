@@ -12,7 +12,7 @@ export default function InternshipDetails() {
     // Replace with your Render URL or environment variable
     const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
     
-    fetch(`${API_URL}/api/internships/${id}`)
+    fetch(`${API_URL}/api/interns/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setInternship(data);
