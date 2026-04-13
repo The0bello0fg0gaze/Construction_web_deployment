@@ -160,24 +160,6 @@ export default function Home() {
         </div>
       </section>
       
-      {/* Verification Portal Promo */}
-      <section className="py-24 bg-neutral-900 text-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1541888086425-d81bb19240f5?auto=format&fit=crop&q=80&w=1920')] opacity-10 bg-cover bg-center" />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-          <h2 className="text-3xl lg:text-5xl font-extrabold tracking-tight mb-6">
-            Verify Our Interns Securely
-          </h2>
-          <p className="text-xl text-neutral-400 max-w-3xl mx-auto mb-10 leading-relaxed">
-            We believe in transparency and empowering our future builders. Use our verification portal to scan an intern's certificate QR code and instantly validate their completed tasks and tenure.
-          </p>
-          <Link 
-            to="/verify"
-            className="inline-flex items-center justify-center bg-amber-500 hover:bg-amber-600 text-neutral-900 font-bold px-8 py-4 rounded-md transition-colors text-lg"
-          >
-            Go to Verification Portal
-          </Link>
-        </div>
-      </section>
     </div>
   );
 }

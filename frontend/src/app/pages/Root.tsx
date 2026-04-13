@@ -14,7 +14,6 @@ export default function Root() {
     { label: "Home", path: "/" },
     { label: "Projects", path: "/projects" },
     { label: "About Us", path: "/about" },
-    { label: "Verify Intern", path: "/verify" },
   ];
 
   return (
@@ -135,16 +134,10 @@ export default function Root() {
             </div>
 
             <div>
-              <h3 className="font-semibold text-lg mb-4">Verify Identity</h3>
+              <h3 className="font-semibold text-lg mb-4">Transparency Policy</h3>
               <p className="text-neutral-400 text-sm leading-relaxed mb-4">
                 Verify the authenticity of our interns' certificates securely through our dedicated portal.
-              </p>
-              <Link 
-                to="/verify" 
-                className="inline-block border border-amber-500 text-amber-500 hover:bg-amber-500 hover:text-neutral-900 font-semibold px-4 py-2 rounded-md transition-colors text-sm"
-              >
-                Go to Portal
-              </Link>
+		</p>
             </div>
           </div>
           

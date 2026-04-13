@@ -24,11 +24,11 @@ export default function About() {
         <section className="mb-24">
           <div className="flex flex-col lg:flex-row gap-12 items-center">
             <div className="lg:w-1/2 space-y-6">
-              <h2 className="text-3xl font-bold text-neutral-900">Our Story</h2>
+              <h2 className="text-3xl font-bold text-neutral-900">ABOUT US</h2>
               <div className="w-20 h-1.5 bg-amber-500 rounded-full"></div>
               <p className="text-lg text-neutral-600 leading-relaxed">
-                Founded over 25 years ago, BuildCorp started with a simple belief: construction isn't just about erecting buildings; it's about creating spaces where people live, work, and thrive. What began as a small family-owned contractor has grown into an industry leader responsible for some of the city's most iconic commercial and residential structures.
-              </p>
+	      The constructors is a leading construction contracting firm specializing in Reinforced Cement Concrete (RCC) works and comprehensive finishing services to deliver turnkey lock-and-key solutions. With a skilled workforce and modern construction techniques, we ensure high-quality, durable, and cost-effective structures for residential, commercial, and industrial projects. Our team of skilled professionals is equipped to handle all aspects of your project, from structural reinforcement to detailed finishing touches. Surya Construction ensures minimal time and cost overruns, delivering excellent quality project outcomes with honesty and professional integrity. At Surya Construction, the union of advanced technology and a professional approach has propelled us to our current standing in the industry.
+	      </p>
               <p className="text-lg text-neutral-600 leading-relaxed">
                 Throughout our journey, our commitment to excellence has never wavered. We invest heavily in our team, integrating cutting-edge technology and sustainable practices to ensure every project is delivered safely, on time, and beyond expectations.
               </p>
