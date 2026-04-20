@@ -35,7 +35,7 @@ export default function VerifyInternship() {
             Internship Verification Portal
           </h1>
           <p className="text-xl text-neutral-300 max-w-2xl mx-auto leading-relaxed">
-            Verify the authenticity of BuildCorp internship certificates. Enter the unique Certificate ID below or scan the QR code on the physical document.
+            Verify the authenticity of Excavation Brothers internship certificates. Enter the unique Certificate ID below or scan the QR code on the physical document.
           </p>
         </div>
       </div>

@@ -14,7 +14,7 @@ export default function About() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-20">
-          <h1 className="text-4xl md:text-5xl font-extrabold text-neutral-900 mb-6 tracking-tight">About BuildCorp</h1>
+          <h1 className="text-4xl md:text-5xl font-extrabold text-neutral-900 mb-6 tracking-tight">About Excavation Brothers</h1>
           <p className="text-xl text-neutral-600 leading-relaxed">
             Building the foundations of tomorrow with uncompromising dedication to quality, safety, and our clients' vision.
           </p>
@@ -27,7 +27,7 @@ export default function About() {
               <h2 className="text-3xl font-bold text-neutral-900">ABOUT US</h2>
               <div className="w-20 h-1.5 bg-amber-500 rounded-full"></div>
               <p className="text-lg text-neutral-600 leading-relaxed">
-	      The constructors is a leading construction contracting firm specializing in Reinforced Cement Concrete (RCC) works and comprehensive finishing services to deliver turnkey lock-and-key solutions. With a skilled workforce and modern construction techniques, we ensure high-quality, durable, and cost-effective structures for residential, commercial, and industrial projects. Our team of skilled professionals is equipped to handle all aspects of your project, from structural reinforcement to detailed finishing touches. Surya Construction ensures minimal time and cost overruns, delivering excellent quality project outcomes with honesty and professional integrity. At Surya Construction, the union of advanced technology and a professional approach has propelled us to our current standing in the industry.
+	      The Excavation Brothers is a leading construction contracting firm specializing in Reinforced Cement Concrete (RCC) works and comprehensive finishing services to deliver turnkey lock-and-key solutions. With a skilled workforce and modern construction techniques, we ensure high-quality, durable, and cost-effective structures for residential, commercial, and industrial projects. Our team of skilled professionals is equipped to handle all aspects of your project, from structural reinforcement to detailed finishing touches. Excavation Brothers ensures minimal time and cost overruns, delivering excellent quality project outcomes with honesty and professional integrity. At Excavation Brothers, the union of advanced technology and a professional approach has propelled us to our current standing in the industry.
 	      </p>
               <p className="text-lg text-neutral-600 leading-relaxed">
                 Throughout our journey, our commitment to excellence has never wavered. We invest heavily in our team, integrating cutting-edge technology and sustainable practices to ensure every project is delivered safely, on time, and beyond expectations.
@@ -35,8 +35,8 @@ export default function About() {
             </div>
             <div className="lg:w-1/2 relative rounded-2xl overflow-hidden shadow-2xl h-[400px] w-full">
               <img 
-                src="https://images.unsplash.com/photo-1541888086425-d81bb19240f5?auto=format&fit=crop&q=80&w=1200" 
-                alt="BuildCorp Team on site" 
+                src="/src/app/data/Airport2.jpeg" 
+                alt="Excavation Brothers Team on site" 
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-neutral-900/10"></div>

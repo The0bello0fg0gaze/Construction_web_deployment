@@ -26,7 +26,7 @@ export default function Root() {
               <div className="bg-amber-500 text-white p-2.5 rounded-lg group-hover:bg-amber-600 transition-colors">
                 <HardHat className="w-6 h-6" />
               </div>
-              <span className="font-bold text-2xl tracking-tight text-neutral-900">BuildCorp</span>
+              <span className="font-bold text-2xl tracking-tight text-neutral-900"> Excavation Brothers</span>
             </Link>
 
             {/* Desktop Navigation */}
@@ -100,17 +100,11 @@ export default function Root() {
                 <div className="bg-amber-500 text-white p-2 rounded-md">
                   <HardHat className="w-5 h-5" />
                 </div>
-                <span className="font-bold text-xl tracking-tight">BuildCorp</span>
+                <span className="font-bold text-xl tracking-tight"> Excavation Brothers</span>
               </Link>
               <p className="text-neutral-400 text-sm leading-relaxed mb-6">
                 Building the future with uncompromising quality, safety, and integrity. Your trusted construction partner for commercial and residential developments.
               </p>
-              <div className="flex gap-4">
-                <a href="#" className="text-neutral-400 hover:text-amber-500 transition-colors"><Facebook className="w-5 h-5" /></a>
-                <a href="#" className="text-neutral-400 hover:text-amber-500 transition-colors"><Twitter className="w-5 h-5" /></a>
-                <a href="#" className="text-neutral-400 hover:text-amber-500 transition-colors"><Linkedin className="w-5 h-5" /></a>
-                <a href="#" className="text-neutral-400 hover:text-amber-500 transition-colors"><Instagram className="w-5 h-5" /></a>
-              </div>
             </div>
             
             <div>
@@ -142,7 +136,6 @@ export default function Root() {
           </div>
           
           <div className="border-t border-neutral-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-neutral-500">
-            <p>&copy; {new Date().getFullYear()} BuildCorp Construction. All rights reserved.</p>
             <div className="flex gap-4 mt-4 md:mt-0">
               <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
               <a href="#" className="hover:text-white transition-colors">Terms of Service</a>

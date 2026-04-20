@@ -139,7 +139,7 @@ export default function InternshipDetails() {
               </div>
               <div className="text-center md:text-right">
                 <p className="text-xs text-neutral-400 uppercase tracking-wider font-semibold mb-1">Issuing Authority</p>
-                <p className="font-bold text-neutral-800">BuildCorp Human Resources</p>
+                <p className="font-bold text-neutral-800">Excavation Brothers Human Resources</p>
               </div>
             </div>
           </div>
