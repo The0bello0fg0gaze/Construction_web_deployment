@@ -1,10 +1,14 @@
+import build1 from "/src/app/data/build1.jpeg";
+import Homeland from "/src/app/data/Homeland.jpeg";
+import nobel from "/src/app/data/nobel.jpeg";
+import pinical from "/src/app/data/pinical.jpeg";
 export const PROJECTS = [
   {
     id: "p1",
     title: "Apollo Hospital Mohali",
     category: "Healthcare",
     status: "in-progress",
-    image: "/src/app/data/build1.jpeg",
+    image: build1,
     description: "Basement Mining and Cleaning Operation.",
     completionDate: "Expected Q4 2028",
   },
@@ -13,7 +17,7 @@ export const PROJECTS = [
     title: "Homeland Regalia Apartments",
     category: "Residential",
     status: "in-progress",
-    image: "/src/app/data/Homeland.jpeg",
+    image: Homeland,
     description: "Soil Mining, Shifting and Area Cleaning.",
     completionDate: "Expected Q2 2027",
   },
@@ -22,7 +26,7 @@ export const PROJECTS = [
     title: "Nobel Callista, Mohali",
     category: "Residential",
     status: "completed",
-    image: "/src/app/data/nobel.jpeg",
+    image: nobel,
     description: "Area Mining With Construction Vehicles, Soil Shifting and Cleaning.",
     completionDate: "Completed Jan 2026",
   },
@@ -31,7 +35,7 @@ export const PROJECTS = [
     title: "The Pinnacle Mohali",
     category: "Residential",
     status: "completed",
-    image: "/src/app/data/pinical.jpeg",
+    image: pinical,
     description: "Boundary Cutting, Basement Filling And Cleaning.",
     completionDate: "Completed Mar 2024",
   },
