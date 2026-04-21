@@ -23,31 +23,30 @@ app.get('/api/interns/:id', async (req, res) => {
   const { id } = req.params;
 
   try {
-    // 1. Fetch intern with column aliasing to match your React component
-    const internResult = await pool.query(
-      'SELECT id, name AS "internName", role, start_date AS "startDate", end_date AS "endDate" FROM interns WHERE id = $1', 
-      [id]
-    );
+    const query = `
+      SELECT 
+        i.id, 
+        i.name AS "internName", 
+        i.role, 
+        i.start_date AS "startDate", 
+        i.end_date AS "endDate", 
+        i.supervisor,
+        COALESCE(json_agg(t.description) FILTER (WHERE t.description IS NOT NULL), '[]') AS "tasksCompleted"
+      FROM interns i
+      LEFT JOIN tasks t ON i.id = t.intern_id
+      WHERE i.id = $1
+      GROUP BY i.id;
+    `;
+
+    const result = await pool.query(query, [id]);
     
-    if (internResult.rows.length === 0) {
+    if (result.rows.length === 0) {
       return res.status(404).json({ error: 'Intern record not found' });
     }
 
-    const intern = internResult.rows[0];
-
-    // 2. Fetch only the task strings
-    const tasksResult = await pool.query('SELECT description FROM tasks WHERE intern_id = $1', [id]);
-    
-    // 3. Map the array so it's just strings: ["Task 1", "Task 2"] 
-    // This matches your .map() function in the frontend
-    const responseData = {
-      ...intern,
-      tasksCompleted: tasksResult.rows.map(t => t.task_description)
-    };
-
-    res.json(responseData);
+    res.json(result.rows[0]);
   } catch (err) {
-    console.error(err);
+    console.error('Database Error:', err);
     res.status(500).json({ error: 'Server error' });
   }
 });
