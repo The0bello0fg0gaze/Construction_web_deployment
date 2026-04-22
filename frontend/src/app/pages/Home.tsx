@@ -53,7 +53,7 @@ export default function Home() {
       <section className="bg-amber-500 py-12 relative z-20 -mt-8 mx-4 sm:mx-8 lg:mx-auto max-w-6xl rounded-lg shadow-xl mb-24">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 px-8 divide-x divide-amber-600/30">
           <div className="text-center px-4">
-            <p className="text-4xl font-extrabold text-neutral-900 mb-2">5+</p>
+            <p className="text-4xl font-extrabold text-neutral-900 mb-2">10+</p>
             <p className="text-amber-900 font-semibold text-sm uppercase tracking-wider">Years Experience</p>
           </div>
           <div className="text-center px-4">
