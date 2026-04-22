@@ -49,12 +49,6 @@ export default function Root() {
                   {link.label}
                 </Link>
               ))}
-              <Link
-                to="/verify"
-                className="bg-neutral-900 hover:bg-neutral-800 text-white px-5 py-2.5 rounded-md text-sm font-semibold transition-colors"
-              >
-                Verification Portal
-              </Link>
             </nav>
 
             {/* Mobile menu button */}
