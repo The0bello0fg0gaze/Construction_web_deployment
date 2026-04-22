@@ -1,6 +1,6 @@
 import { VALUES } from "../data/mockData";
 import { ShieldCheck, Award, Handshake, Leaf, Building2, Users, Target } from "lucide-react";
-
+import Airport2 from "/src/app/data/Airport2.jpeg";
 export default function About() {
   const iconMap: Record<string, any> = {
     ShieldCheck,
@@ -35,7 +35,7 @@ export default function About() {
             </div>
             <div className="lg:w-1/2 relative rounded-2xl overflow-hidden shadow-2xl h-[400px] w-full">
               <img 
-                src="/src/app/data/Airport2.jpeg" 
+                src={Airport2}
                 alt="Excavation Brothers Team on site" 
                 className="w-full h-full object-cover"
               />
