@@ -69,35 +69,7 @@ export default function VerifyInternship() {
               Verify Certificate
             </button>
             
-            <div className="mt-8 relative flex items-center">
-              <div className="flex-grow border-t border-neutral-200"></div>
-              <span className="flex-shrink-0 mx-4 text-neutral-400 text-sm font-medium uppercase tracking-wider">OR</span>
-              <div className="flex-grow border-t border-neutral-200"></div>
-            </div>
-
-            <button
-              type="button"
-              className="mt-8 w-full bg-white hover:bg-neutral-50 text-neutral-700 border border-neutral-200 font-semibold py-4 rounded-lg text-lg transition-colors flex items-center justify-center gap-2"
-              onClick={() => alert("QR scanning feature is typically activated on mobile devices. For this demo, please use the manual ID entry.")}
-            >
-              <QrCode className="w-6 h-6" /> Scan QR Code
-            </button>
           </form>
-        </div>
-
-        {/* Mock IDs for Demo Purposes */}
-        <div className="bg-blue-50 border border-blue-100 rounded-xl p-6 flex gap-4">
-          <AlertCircle className="w-6 h-6 text-blue-600 flex-shrink-0" />
-          <div>
-            <h3 className="text-blue-900 font-bold mb-2">Demo Testing Data</h3>
-            <p className="text-blue-800 text-sm mb-3">
-              Since we are using mock data for this demonstration, you can try verifying these sample Certificate IDs:
-            </p>
-            <ul className="list-disc list-inside text-blue-800 font-mono text-sm space-y-1">
-              <li>CERT-2025-001 <span className="text-blue-600/70 font-sans ml-2">(Project Management)</span></li>
-              <li>CERT-2025-002 <span className="text-blue-600/70 font-sans ml-2">(Civil Engineering)</span></li>
-            </ul>
-          </div>
         </div>
       </div>
     </div>
